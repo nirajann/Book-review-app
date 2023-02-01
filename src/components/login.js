@@ -1,18 +1,21 @@
 
 
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {Form, FormGroup,Input, Label ,Button} from 'reactstrap';
 import userService from '../services/userService'
 
 const Login = (e) =>{
     const [username,setusername] = useState('')
     const [password,setPassword] = useState('')
+    const navigate = useNavigate()
 
     const handleLogin= (e) => {
             e.preventDefault();
             userService.login({username,password}).then(res => {
                 alert(res.data)
                 window.localStorage.setItem(`token`,res.data.token)
+                navigate("/")
             
             }).catch(err => console.log(err))
            

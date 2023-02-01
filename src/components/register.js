@@ -1,7 +1,9 @@
 
 import axios from 'axios'
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {Form, FormGroup,Input, Label ,Button, FormFeedback} from 'reactstrap';
+
 
 const Register = () =>{
     const [Username,setusername] = useState('name')
@@ -9,11 +11,15 @@ const Register = () =>{
     const [Confirmpassword,setConfirmpassword] = useState('')
     const [message,setMessage] = useState('')
     const [valid,setvalid] = useState('')
+    const navigate = useNavigate()
 
     const handleRegister = (e) => {
         console.log("regitseres")
-        axios.post('http://localhost:3000/users/regitser',{Username,Password})
-        .then(response => console.log(response.data))
+        axios.post('http://localhost:4000/users/regitser',{Username,Password})
+        .then(response => {
+          window.alert(response.data.status)
+          navigate("/Login")
+        })
         .catch(err => console.log(err))
     }
 
