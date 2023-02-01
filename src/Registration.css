@@ -1,0 +1,50 @@
+.registration-form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.registration-form h3 {
+  margin-top: 0;
+}
+
+.registration-form .form-group {
+  margin-bottom: 15px;
+}
+
+.registration-form .form-control, .registration-form .custom-control-input {
+  background-color: #f7f7f7;
+}
+
+.registration-form .btn {
+  font-size: 16px;
+  font-weight: bold;
+  background: #2196F3;
+  border: none;
+  margin-bottom: 20px;
+}
+
+.registration-form .btn:hover, .registration-form .btn:focus {
+  background: #1980a9;
+  outline: none !important;
+}
+
+.registration-form a {
+  text-decoration: none;
+  color: #2196F3;
+  transition: all 0.5s;
+}
+
+.registration-form a:hover {
+  color: #1980a9;
+}
+
+.registration-form .forgot-password {
+  color: #2196F3;
+  margin-top: 15px;
+}

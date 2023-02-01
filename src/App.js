@@ -1,12 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import Register from '../src/components/register';
+import Login from './components/login';
+import Registraion from './components/userRegister';
+
+
 
 function App() {
-  return (
- <div>
-<h2>Book Review App</h2>
+  
+  return(
+    <>    <h2>book review app</h2>
+    <div class="container">
+   {/* <Register/> */}
+   <Login/>
+    </div>
+    </>
 
- </div>
   );
 }
 
