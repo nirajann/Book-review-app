@@ -1,0 +1,50 @@
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    line-height: 1.5;
+    color: #333333;
+  }
+  
+  Form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  FormGroup {
+    margin-bottom: 20px;
+  }
+  
+  Label {
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #333333;
+  }
+  
+  Input {
+    width: 350px;
+    height: 50px;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+  
+  Button {
+    width: 350px;
+    height: 50px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+    background-color: #f9bb2d;
+    color: #ffffff;
+    margin-top: 20px;
+  }

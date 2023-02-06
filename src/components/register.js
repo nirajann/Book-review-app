@@ -14,8 +14,8 @@ const Register = () =>{
     const navigate = useNavigate()
 
     const handleRegister = (e) => {
-        console.log("regitseres")
-        axios.post('http://localhost:4000/users/regitser',{Username,Password})
+        console.log("regitsered")
+        axios.post('http://localhost:4000/users/register',{Username,Password})
         .then(response => {
           window.alert(response.data.status)
           navigate("/Login")

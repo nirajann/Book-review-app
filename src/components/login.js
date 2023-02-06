@@ -1,9 +1,10 @@
 
-
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {Form, FormGroup,Input, Label ,Button} from 'reactstrap';
 import userService from '../services/userService'
+
+import "../login.css"
 
 const Login = (e) =>{
     const [username,setusername] = useState('')
@@ -26,9 +27,9 @@ const Login = (e) =>{
         <>
         <h1>Login</h1>
     <Form onSubmit={handleLogin}>
-    <FormGroup floating>
-    <Label for="exampleusername">
-        username
+    <FormGroup>
+    <Label for="exampleusername" className="d-block font-weight-bold">
+        Username
       </Label>
       <Input
         id="exampleusername"
@@ -37,12 +38,13 @@ const Login = (e) =>{
         type="username"
         value ={username}
         onChange={(e)=> setusername(e.target.value)}
+        className="form-control"
       />
 
     </FormGroup>
     {' '}
-    <FormGroup floating>
-    <Label for="examplePassword">
+    <FormGroup>
+    <Label for="examplePassword" className="d-block font-weight-bold">
         Password
       </Label>
       <Input
@@ -52,11 +54,12 @@ const Login = (e) =>{
         type="password"
         value ={password}
         onChange={(e)=> setPassword(e.target.value)}
+        className="form-control"
       />
     </FormGroup>
     {' '}
     {' '}
-    <Button color='primary' >
+    <Button color='primary' className="btn btn-primary btn-block" onSubmit={Login}>
       Login 
     </Button>
   </Form>
